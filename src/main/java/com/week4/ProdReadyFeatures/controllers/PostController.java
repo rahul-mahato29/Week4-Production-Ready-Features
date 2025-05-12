@@ -23,4 +23,9 @@ public class PostController {
     public PostDTO createPost(@RequestBody PostDTO inputPost){
         return postService.createNewPost(inputPost);
     }
+
+    @GetMapping(path = "/{postId}")
+    public PostDTO getPostById(@PathVariable(name = "postId") Long id){
+        return postService.getPostById(id);
+    }
 }
