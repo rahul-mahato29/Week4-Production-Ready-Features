@@ -3,9 +3,11 @@ package com.week4.ProdReadyFeatures.controllers;
 import com.week4.ProdReadyFeatures.dto.PostDTO;
 import com.week4.ProdReadyFeatures.services.PostService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping(path = "/posts")
@@ -27,5 +29,10 @@ public class PostController {
     @GetMapping(path = "/{postId}")
     public PostDTO getPostById(@PathVariable(name = "postId") Long id){
         return postService.getPostById(id);
+    }
+
+    @PutMapping(path = "/update/{postId}")
+    public ResponseEntity<PostDTO> updatePostById(@PathVariable(name = "postId") Long id, @RequestBody Map<String, Object> updatedVal){
+        return ResponseEntity.ok(postService.updatePostById(id, updatedVal));
     }
 }
