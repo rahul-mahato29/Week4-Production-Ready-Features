@@ -4,7 +4,6 @@ import com.week4.ProdReadyFeatures.dto.PostDTO;
 import com.week4.ProdReadyFeatures.entities.PostEntity;
 import com.week4.ProdReadyFeatures.exceptions.ResourceNotFoundException;
 import com.week4.ProdReadyFeatures.repositories.PostRepository;
-import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.util.ReflectionUtils;

@@ -2,6 +2,7 @@ package com.week4.ProdReadyFeatures.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 @Entity
 @Getter
@@ -9,6 +10,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "post")
+@Audited
 public class PostEntity extends AuditableEntity {
 
     @Id

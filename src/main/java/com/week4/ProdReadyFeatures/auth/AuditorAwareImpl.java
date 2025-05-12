@@ -8,6 +8,6 @@ public class AuditorAwareImpl implements AuditorAware<String> {
     @Override
     public Optional<String> getCurrentAuditor() {
         //this method return the name of the current Auditor(meaning logged-in user)
-        return Optional.of("Rahul Sharma"); //hardcoded, because not implemented auth yet
+        return Optional.of("Rahul Mahato"); //hardcoded, because not implemented auth yet
     }
 }
